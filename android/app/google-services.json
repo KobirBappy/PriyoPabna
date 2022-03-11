@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "307709310896",
+    "firebase_url": "https://blood-donet-e5f18-default-rtdb.firebaseio.com",
+    "project_id": "blood-donet-e5f18",
+    "storage_bucket": "blood-donet-e5f18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307709310896:android:ab27963a405b9070e0c875",
+        "android_client_info": {
+          "package_name": "com.kobirbappy.priyopabna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307709310896-u7mplvj2d96e8sd2a0tp615q9p7buc90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBejVVHjMnijgG1BZWCVPlfKTbhI3xPbRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307709310896-u7mplvj2d96e8sd2a0tp615q9p7buc90.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

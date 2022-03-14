@@ -6,12 +6,20 @@ import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../common/colors.dart';
 import '../data/blood_request.dart';
+
 import '../utils/blood_types.dart';
 import '../utils/tools.dart';
 
-class SingleRequestScreen extends StatelessWidget {
+class SingleRequestScreen extends StatefulWidget {
   final BloodRequest request;
   const SingleRequestScreen({Key key, this.request}) : super(key: key);
+
+  @override
+  State<SingleRequestScreen> createState() => _SingleRequestScreenState();
+}
+
+class _SingleRequestScreenState extends State<SingleRequestScreen> {
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,42 +40,42 @@ class SingleRequestScreen extends StatelessWidget {
               Padding(
                 padding: bodyWrap,
                 child: Text(
-                  '${request.submittedBy} on ${Tools.formatDate(request.submittedAt)}',
+                  '${widget.request.submittedBy} on ${Tools.formatDate(widget.request.submittedAt)}',
                   style: bodyStyle,
                 ),
               ),
               Text('Patient Name', style: titleStyle),
               Padding(
                 padding: bodyWrap,
-                child: Text(request.patientName ?? '', style: bodyStyle),
+                child: Text(widget.request.patientName ?? '', style: bodyStyle),
               ),
               Text('Location', style: titleStyle),
               Padding(
                 padding: bodyWrap,
                 child: Text(
-                  '${request.medicalCenter.name} - ${request.medicalCenter.location}',
+                  '${widget.request.medicalCenter.name} - ${widget.request.medicalCenter.location}',
                   style: bodyStyle,
                 ),
               ),
               Text('Blood Type', style: titleStyle),
               Padding(
                 padding: bodyWrap,
-                child: Text(request.bloodType.name ?? '', style: bodyStyle),
+                child: Text(widget.request.bloodType.name ?? '', style: bodyStyle),
               ),
               Text('Possible Donors', style: titleStyle),
               Padding(
                 padding: bodyWrap,
                 child: Text(
-                    request.bloodType.possibleDonors
+                    widget.request.bloodType.possibleDonors
                         .map((e) => e.name)
                         .join('   /   '),
                     style: bodyStyle),
               ),
-              if (!Tools.isNullOrEmpty(request.note)) ...[
+              if (!Tools.isNullOrEmpty(widget.request.note)) ...[
                 Text('Notes', style: titleStyle),
                 Padding(
                   padding: bodyWrap,
-                  child: Text(request.note, style: bodyStyle),
+                  child: Text(widget.request.note, style: bodyStyle),
                 ),
               ],
               const SizedBox(height: 16),
@@ -84,13 +92,14 @@ class SingleRequestScreen extends StatelessWidget {
                         ),
                         onPressed: () async {
                           final url = 'https://www.google.com/maps/search/'
-                              '?api=1&query=${request.medicalCenter.latitude},'
-                              '${request.medicalCenter.longitude}';
+                              '?api=1&query=${widget.request.medicalCenter.latitude},'
+                              '${widget.request.medicalCenter.longitude}';
                           if (await canLaunch(url) != null) {
                             launch(url);
                           } else {
                             Fluttertoast.showToast(msg: 'Could not launch map');
                           }
+
                         },
                         icon: const Icon(Icons.navigation),
                         label: const Text('Get Directions'),
@@ -106,11 +115,13 @@ class SingleRequestScreen extends StatelessWidget {
                         ),
                         onPressed: () {
                           Share.share(
-                            '${request.patientName} needs ${request.bloodType.name} '
-                            'blood by ${Tools.formatDate(request.requestDate)}.\n'
-                            'You can donate by visiting ${request.medicalCenter.name} located in '
-                            '${request.medicalCenter.location}.\n\n'
-                            'Contact +88${request.contactNumber} for more info.',
+                            'Emergency Request!\n\n'
+                            '${widget.request.patientName} needs ${widget.request.bloodType.name} '
+                            'blood by ${Tools.formatDate(widget.request.requestDate)}.\n'
+                            'You can donate by visiting ${widget.request.medicalCenter.name} located in '
+                            '${widget.request.medicalCenter.location}.\n\n'
+                            'Contact +88${widget.request.contactNumber} for more info.\n\n'
+                            'By Priyo Pabna App',
                           );
                         },
                         icon: const Icon(Icons.share),
@@ -140,7 +151,7 @@ class SingleRequestScreen extends StatelessWidget {
                     )),
                   ),
                   onPressed: () async {
-                    final contact = 'tel:+88${request.contactNumber}';
+                    final contact = 'tel:+88${widget.request.contactNumber}';
                     if (await canLaunch(contact)) {
                       launch(contact);
                     } else {
@@ -156,9 +167,9 @@ class SingleRequestScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              if (!request.isFulfilled &&
-                  request.uid == FirebaseAuth.instance.currentUser.uid)
-                _MarkFulfilledBtn(request: request),
+              if (!widget.request.isFulfilled &&
+                  widget.request.uid == FirebaseAuth.instance.currentUser.uid)
+                _MarkFulfilledBtn(request: widget.request),
             ],
           ),
         ),

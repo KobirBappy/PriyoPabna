@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -17,13 +16,13 @@ import 'screens/splash_screen.dart';
 import 'screens/tutorial_screen.dart';
 import 'screens/who_can_donate_screen.dart';
 
+
+
 Future<void> main() async {
   await Hive.initFlutter();
   await Hive.openBox(ConfigBox.key);
-
   runApp(MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   @override

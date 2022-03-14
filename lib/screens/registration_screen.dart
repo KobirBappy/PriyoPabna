@@ -12,6 +12,7 @@ import '../utils/blood_types.dart';
 import '../utils/validators.dart';
 import '../widgets/action_button.dart';
 import 'home_screen.dart';
+import 'login_screen.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static const route = 'register';
@@ -75,6 +76,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         callback: _register,
                         isLoading: _isLoading,
                       ),
+                      TextButton(onPressed: (){
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+                          return LoginScreen();
+                        }));
+
+                      }, child: Text('Back to Login'))
                     ],
                   ),
                 ),

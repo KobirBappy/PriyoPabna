@@ -1,16 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:fontisto_flutter/fontisto_flutter.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../common/app_config.dart';
 import '../common/colors.dart';
 import '../data/info_group.dart';
 import '../widgets/action_button.dart';
 
-class WhoCanDonateScreen extends StatelessWidget {
+class WhoCanDonateScreen extends StatefulWidget {
   static const route = 'who-can-donate';
   const WhoCanDonateScreen({Key key}) : super(key: key);
+
+  @override
+  State<WhoCanDonateScreen> createState() => _WhoCanDonateScreenState();
+}
+
+class _WhoCanDonateScreenState extends State<WhoCanDonateScreen> {
+
+  final BannerAd myBanner = BannerAd(
+    adUnitId: 'ca-app-pub-3940256099942544/6300978111',
+    size: AdSize.banner,
+    request: AdRequest(),
+    listener: BannerAdListener(),
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    myBanner.load();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +39,7 @@ class WhoCanDonateScreen extends StatelessWidget {
         .headline6
         .copyWith(color: MainColors.primary);
     return Scaffold(
-      appBar: AppBar(title: const Text('Who Can Donate Blood ?')),
+      appBar: AppBar(title: const Text('Who Can Donate Blood?')),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -45,7 +65,7 @@ class WhoCanDonateScreen extends StatelessWidget {
                 child: ActionButton(
                   callback: () async {
                     if (await canLaunch(AppConfig.bloodDonationInfoLink)) {
-                      launch(AppConfig.bloodDonationInfoLink);
+                      launch(AppConfig.bloodDonationInfoLink,enableJavaScript: true,);
                     } else {
                       Fluttertoast.showToast(msg: 'Could not launch the link');
                     }
@@ -56,6 +76,10 @@ class WhoCanDonateScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: Container(
+        child: AdWidget(ad: myBanner,),
+        height: 50,
       ),
     );
   }

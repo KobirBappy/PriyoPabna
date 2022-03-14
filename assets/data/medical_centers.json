@@ -1,142 +1,129 @@
 [
   {
-    "name": "Auxilia",
-    "location": "Lebanon",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01282883", "01290407", "09218922"]
+    "name": "Pabna Sadar Hospital",
+    "phoneNumbers": ["01711101493"],
+    "location": "Shalgaria,Pabna",
+    "longitude": "89.24611148368383",
+    "latitude": "24.016913070487877"
   },
   {
-    "name": "Green Peace",
-    "location": "Lebanon",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01785665"]
+    "name": "PDC Hospital",
+    "phoneNumbers": ["xx"],
+    "location": "Hospital Road,Shalgaria,Pabna",
+    "longitude": "89.24083363053586",
+    "latitude": "24.010223475033204"
   },
   {
-    "name": "Caritas",
-    "location": "Lebanon",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01384737", "01384738", "01384739", "01502552"]
+    "name": "Shimla Hospital & Diagnostic Center",
+    "phoneNumbers": ["01713-228218"],
+    "location": "Thana Mor,Hospital Road, Pabna 6600",
+    "longitude": "89.2421532847362",
+    "latitude": "24.009190752344082"
   },
   {
-    "name": "Centre Sedim",
-    "location": "Furn el Chebbak",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01293100", "01293101"]
+    "name": "Jalal Memorial Hospital",
+    "phoneNumbers": ["01764011657"],
+    "location": "Hospital Road, Pabna",
+    "longitude": "89.241954125811",
+    "latitude": "24.010177165048656"
   },
   {
-    "name": "Arc en Ciel",
-    "location": "Jisr el Wateh",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01564630", "01564631", "01564632", "01564633"]
+    "name": "Pabna Diabetic Hospital",
+    "phoneNumbers": ["073165052"],
+    "location": "Abdul Hamid Road, Pabna 6600",
+    "longitude": "89.23648223949006",
+    "latitude": "24.005594573044082"
   },
   {
-    "name": "Yasa",
-    "location": "Hazmieh",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["05452587", "05952587"]
+    "name": "Pabna Community Hospital",
+    "phoneNumbers": ["01707759000"],
+    "location": "Pabna City Bypass, Pabna",
+    "longitude": "89.24098498897543",
+    "latitude": "24.027177350816295"
   },
   {
-    "name": "Air Liquide O2",
-    "location": "Dekwaneh",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01692380", "01692381", "01692382", "01692383", "01692384", "01692385"]
+    "name": "Shafique Specialized Hospital",
+    "phoneNumbers": ["01701654390"],
+    "location": "263R+PRQ, Pabna",
+    "longitude": "89.24249091357386",
+    "latitude": "24.00449427762062"
   },
   {
-    "name": "CRC لوازم معاقين",
-    "location": "Lebanon",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01510261", "03601793"]
+    "name": "LABAID Limited (Diagnostic), Pabna",
+    "phoneNumbers": ["01766661901"],
+    "location": "S.S Tower, Thana Para, Shalgaria Gorosthan Rd, Pabna 6600",
+    "longitude": "89.23940738742327",
+    "latitude": "24.0083461735177"
   },
   {
-    "name": "Jad للمخدرات",
-    "location": "Lebanon",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["09546357", "03749484"]
+    "name": "Euro Medical Center",
+    "phoneNumbers": ["073163098"],
+    "location": "Hospital Road, Pabna 6600",
+    "longitude": "89.23972605674456",
+    "latitude": "24.00884397625074"
   },
   {
-    "name": "Hindi Laboratory مختبرات هندي",
-    "location": "Jal el Dib",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["04713131"]
+    "name": "Kimiya Clinic",
+    "phoneNumbers": ["073166992"],
+    "location": "Hospital Road, Pabna 6600",
+    "longitude": "89.23980732627302",
+    "latitude": "24.00856527149707"
   },
   {
-    "name": "CICR اللجنة الدولية للصليب الأحمر",
-    "location": "Hamra",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01739297", "01739298", "01739299"]
+    "name": "Popular General Hospital",
+    "phoneNumbers": ["01711302435"],
+    "location": "আতাইকুলা সড়ক, পাবনা 6600",
+    "longitude": "89.25056880546673",
+    "latitude": "24.006737373571937"
   },
   {
-    "name": "LRC Garage كاراج الصليب الأحمر",
-    "location": "Sed el Baouchrieh",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["03407522", "03337542"]
+    "name": "Mitu General Hospital & Clinic",
+    "phoneNumbers": ["01711405018"],
+    "location": "আতাইকুলা সড়ক, পাবনা 6600",
+    "longitude": "89.25000591673944",
+    "latitude": "24.006856376873834"
   },
   {
-    "name": "مركز الرعاية الدائمة",
-    "location": "Fiyadieh",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["05456859"]
+    "name": "Mental Hospital Pabna",
+    "phoneNumbers": ["073166231"],
+    "location": "2624+QFJ, Pabna",
+    "longitude": "89.20612954221279",
+    "latitude": "24.001982071522892"
   },
   {
-    "name": "مركز الحريري للتصوير",
-    "location": "Unesco",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01705376"]
+    "name": "Pabna Delivery Hospital",
+    "phoneNumbers": ["xx"],
+    "location": "Gobinda Nazim Uddin Rd, Pabna",
+    "longitude": "89.23295672013954",
+    "latitude": "24.007149090637867"
   },
   {
-    "name": "مركز السياحي الطبي",
-    "location": "Ain el Remmaneh",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01665330"]
+    "name": "Pabna Shishu Hospital",
+    "phoneNumbers": ["01779088836"],
+    "location": "Pabna City Bypass, Pabna",
+    "longitude": "89.25053681565308",
+    "latitude": "24.021571363927965"
   },
   {
-    "name": "مركز الشياح الطبي",
-    "location": "Chiyah",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01290837"]
+    "name": "Pabna Swasthosheba Hospital",
+    "phoneNumbers": ["xx"],
+    "location": "Gaspara Bus Stop, N6, Pabna 6600",
+    "longitude": "89.22616055268132",
+    "latitude": "24.03131055278182"
   },
   {
-    "name": "إتحاد جمعيات الصليب الأحمر والهلال الأحمر",
-    "location": "Fiyadieh",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01424851"]
+    "name": "বক্ষব্যাধি হাসপাতাল, পাবনা।",
+    "phoneNumbers": ["01581140", "01581141", "01581142", "01447980", "01447981"],
+    "location": "Hospital Road, Pabna",
+    "longitude": "89.24644612935526",
+    "latitude": "24.01911706796297"
   },
   {
-    "name": "صليب إعانة الأرمن",
-    "location": "Burj Hammoud",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01253793", "01253794", "01253795", "01253796"]
-  },
-  {
-    "name": "الهيئة الصحية الإسلامية",
-    "location": "Lebanon",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01552637"]
-  },
-  {
-    "name": "هيئة الإسعاف الشعبي",
-    "location": "Lebanon",
-    "latitude": "33.888630",
-    "longitude": "35.495480",
-    "phone_numbers": ["01735417"]
+    "name": "Muslim Aid Community Hospital",
+    "phoneNumbers": ["073165615"],
+    "location": "Bus Terminal,Pabna",
+    "longitude": "89.25921290282905",
+    "latitude": "24.008860571569514"
   }
+
 ]

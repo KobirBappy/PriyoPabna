@@ -24,6 +24,7 @@ dependencies:
   image_picker: ^0.8.2
   share: ^2.0.4
   url_launcher: ^6.0.20
+  google_mobile_ads: ^1.1.0
 
 
 dev_dependencies:
@@ -42,9 +43,9 @@ flutter:
     - assets/icons/
 
   fonts:
-    - family: SF
+    - family: lobster
       fonts:
-        - asset: assets/fonts/sf.ttf
-    - family: Courgette
+        - asset: assets/fonts/lobster-regular.ttf
+    - family: lobster
       fonts:
-        - asset: assets/fonts/courgette.ttf
+        - asset: assets/fonts/lobster-regular.ttf

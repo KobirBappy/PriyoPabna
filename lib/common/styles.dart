@@ -1,4 +1,4 @@
 class Fonts {
-  static const logo = 'Courgette';
-  static const text = 'SF';
+  static const logo = 'lobster';
+  static const text = 'lobster';
 }

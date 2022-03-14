@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fontisto_flutter/fontisto_flutter.dart';
 import 'package:hive/hive.dart';
-
 import '../common/app_config.dart';
 import '../common/assets.dart';
 import '../common/colors.dart';
@@ -16,6 +15,7 @@ import '../screens/login_screen.dart';
 import '../screens/news_screen.dart';
 import '../screens/profile_screen.dart';
 import '../screens/who_can_donate_screen.dart';
+import '../utils/AdmobHelper.dart';
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({Key key}) : super(key: key);
@@ -26,6 +26,7 @@ class CustomDrawer extends StatefulWidget {
 
 class _CustomDrawerState extends State<CustomDrawer> {
   bool _showAdmin = false;
+  AdmobHelper admobHelper = new AdmobHelper();
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +59,10 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       title: 'Logout',
                       desc: 'Are you sure you want to logout?',
                       btnCancelText: 'NO',
-                      btnCancelOnPress: () {},
+                      btnCancelOnPress: () {
+                        admobHelper.createInterad();
+                        admobHelper.showInterad();
+                      },
                       btnOkText: 'YES',
                       btnOkOnPress: () {
                         FirebaseAuth.instance.signOut();
@@ -66,12 +70,15 @@ class _CustomDrawerState extends State<CustomDrawer> {
                           LoginScreen.route,
                           (route) => false,
                         );
+                        admobHelper.createInterad();
+                        admobHelper.showInterad();
                       },
                     ).show();
+
                   },
                   child: const Tooltip(
                     message: 'Logout',
-                    child: CircleAvatar(child: Icon(Istos.unlocked)),
+                    child: CircleAvatar(child: Icon(Icons.logout)),
                   ),
                 ),
               ],
@@ -152,8 +159,8 @@ class _DrawerTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(title),
-      leading: Icon(icon),
+      title: Text(title,style: TextStyle(color: Colors.black),),
+      leading: Icon(icon,color: Colors.red,),
       onTap: () {
         Navigator.pop(context);
         Navigator.of(context).pushNamed(destination);
